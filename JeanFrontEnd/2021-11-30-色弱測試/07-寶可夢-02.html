@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            background-image: var(--img);
+        }
+    </style>
+</head>
+
+<body>
+    電腦 : <img src="./images/pokemon1.png" alt="" id="ai"><br>
+    玩家 : <img src="./images/pokemon2.png" alt="" id="player"><br>
+    對戰結果 : <span id="result">玩家獲勝</span><br>
+        <!-- data-abc= " ">是個變數可以放資料的地方 -->
+    <button class="pokemon" data-pokemon="1" style="--img:url(./images/pokemon1.png);"></button>
+    <button class="pokemon" data-pokemon="2" style="--img:url(./images/pokemon2.png);"></button>
+    <button class="pokemon" data-pokemon="3" style="--img:url(./images/pokemon3.png);"></button>
+
+    <script>
+        const aiElement = document.querySelector('#ai');
+        const playerElement = document.querySelector('#player');
+        const resultElement = document.querySelector('#result');
+        // 選擇全部的寶可夢
+        const pokemonElements = document.querySelectorAll('.pokemon');
+        // 每個寶可夢按鈕使用迴圈
+        pokemonElements.forEach(function (pokemonElement) {
+            // 對任一個按鈕監聽
+            pokemonElement.addEventListener('click', function () {
+                // 取得玩家寶可夢號碼
+                let player = pokemonElement.getAttribute('data-pokemon');
+                // 隨機電腦的寶可夢號碼
+                let ai = Math.floor(Math.random() * 3) + 1;
+                // console.log(Math.floor(Math.random() * 3) + 1);
+                // 結果 =
+                let result = '';
+                // 判斷輸贏
+
+                if(player == ai){
+                    result = '平手';
+                }else if(player == 1 && ai == 2){
+                    result = '電腦獲勝';
+                }else if(player == 1 && ai == 3){
+                    result = '玩家獲勝';
+                }else if(player == 2 && ai == 1){
+                    result = '玩家獲勝';
+                }else if(player == 2 && ai == 3){
+                    result = '電腦獲勝';
+                }else if(player == 3 && ai == 1){
+                    result = '電腦獲勝';
+                }else if(player == 3 && ai == 2){
+                    result = '玩家獲勝';
+                }
+
+                aiElement.setAttribute('src',`./images/pokemon${ai}.png`);
+                playerElement.setAttribute('src',`./images/pokemon${player}.png`);
+                resultElement.textContent = result;
+            });
+        });
+    </script>
+</body>
+
+</html>

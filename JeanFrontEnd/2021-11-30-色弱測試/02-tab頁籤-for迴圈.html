@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tabs {
+        display: flex;
+    }
+
+    .tab {
+        width: 100px;
+        height: 50px;
+        border: 2px solid #000;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .tab:first-child {
+        border-width: 2px 1px 0px 2px;
+    }
+
+    .tab:last-child {
+        border-width: 2px 2px 0px 1px;
+    }
+
+    .tab.active {
+        background-color: #ddd;
+    }
+
+    .contents {
+        width: 1000px;
+        height: 50vh;
+        border: 2px solid #000;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .content {
+        display: none;
+        padding: 10px;
+        font-size: 24px;
+    }
+
+    .content.active {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active ">中文</div>
+            <div class="tab">英文</div>
+            <div class="tab">日文</div>
+        </div>
+        <div class="contents">
+            <div class="content active">白日依山盡，黃河入海流。欲窮千里目，更上一層樓。</div>
+            <div class="content">Unrelentingly towards the sea the Yellow River flows; In order to see
+                thousands of miles further afield, To a higher level one must go.</div>
+            <div class="content">白日 山に依りて尽き（はくじつ　やまによってつき）黄河 海に入りて流る （こうが　うみにいってながる）千里の目を窮めんと欲し
+                （せんりのめを　きわめんとほっして）更に上る一層の楼 （さらにのぼる　いっそうのろう）</div>
+        </div>
+    </div>
+
+    <script>
+        let tabElements = document.querySelectorAll('.tab');
+        // console.log(tabElement);
+        let contentElements = document.querySelectorAll('.content');
+        // console.log(contentElement);
+
+        // length 判斷陣列的元素數量
+        for(let j = 0;j < tabElements.length;j++){
+            tabElements[j].addEventListener('click',function(){
+                for(let i = 0;i < tabElements.length;i++){
+                    tabElements[i].classList.remove('active');
+                }
+                tabElements[j].classList.add('active');
+
+                for(let i = 0;i < contentElements.length;i++){
+                    contentElements[i].classList.remove('active');
+                }
+                contentElements[j].classList.add('active');
+            });
+        }
+
+    </script>
+</body>
+
+</html>

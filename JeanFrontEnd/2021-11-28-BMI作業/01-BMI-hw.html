@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        h1{
+            display: flex;
+            justify-content: center;
+            color: cadetblue;
+            font-size: 35px;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        div{
+            font-size: 25px;
+        }
+
+        #height,#weight{
+            width: 100px;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        #submit,#reset{
+            width: 160px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        #result-number {
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        #result-text {
+            padding: 20px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="calc-bmi">
+            <h1>BMI 計算機</h1>
+            <div class="range-bmi">
+                身高：<input type="text" name="" id="height"> cm
+                <br>
+                體重：<input type="text" name="" id="weight"> kg
+                <br>
+                <button id="submit" type="submit">計算</button>
+                <button id="reset">重新計算</button>
+                <hr>
+            </div>
+            <section class="result">
+                <h2 class="result-title">你的BMI : </h2>
+                <p id="result-number"></p>
+                <p id="result-text"></p>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        var heightElm = document.querySelector('#height');
+        var weightElm = document.querySelector('#weight');
+        var calc = document.querySelector('#submit')
+        var resNum = document.querySelector('#result-number');
+        var resText = document.querySelector('#result-text');
+
+        calc.addEventListener('click', function () {
+            if (heightElm.value === '' || weightElm.value === '') {
+                resNum.style.display = "none";
+                resText.style.display = "none";
+                alert('靠北阿!輸入值');
+            } else{
+                resNum.style.display = "block";
+                resText.style.display = "block";
+            }
+
+            var height = Math.pow((Number(heightElm.value) / 100), 2);
+            var bmi = weightElm.value / height;
+            resNum.innerHTML = Math.round(bmi * 100) / 100;
+            if (bmi >= 35) {
+                resText.innerHTML = '過度肥胖，大胖子'
+            } else if (bmi >= 30) {
+                resText.innerHTML = '中度的胖子，還是胖子'
+            } else if (bmi >= 27) {
+                resText.innerHTML = '輕度肥胖，小胖子'
+            } else if (bmi >= 24) {
+                resText.innerHTML = '過重了'
+            } else if (bmi >= 18.5) {
+                resText.innerHTML = '恭喜，標準體。'
+            } else {
+                resText.innerHTML = '令人羨慕的瘦子'
+            };
+        })
+
+        var restBtn = document.querySelector('#reset');
+        restBtn.addEventListener('click', function () {
+            heightElm.value = '';
+            weightElm.value = '';
+            resNum.innerHTML = '';
+            resText.innerHTML = '';
+        })
+    </script>
+</body>
+
+</html>

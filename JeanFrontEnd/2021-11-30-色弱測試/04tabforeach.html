@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tabs {
+            display: flex;
+        }
+
+        .tab {
+            width: 100px;
+            height: 50px;
+            border: 2px solid #000;
+            border-width: 2px 1px 0px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            line-height: 50px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .tab:first-child {
+            border-width: 2px 1px 0px 2px;
+        }
+
+        .tab:last-child {
+            border-width: 2px 2px 0px 1px;
+        }
+
+        .tab.active {
+            background-color: #ddd;
+        }
+
+        .contents {
+            width: 1000px;
+            height: 50vh;
+            border: 2px solid #000;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab ">中文</div>
+            <div class="tab active">英文</div>
+            <div class="tab">日文</div>
+        </div>
+        <div class="contents">
+            <div class="content ">白日依山盡，黃河入海流。欲窮千里目，更上一層樓。</div>
+            <div class="content active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate adipisci,
+                accusamus
+                consequuntur praesentium eaque qui commodi modi facilis quaerat! Deleniti doloremque qui officiis,
+                itaque sunt officia repellat quis dolore odio.</div>
+            <div class="content">020年8月より新しく「エリンが挑戦！にほんごできます。」コンテンツライブラリーサイトを開設いたしました。今後は新サイトをご活用ください。</div>
+        </div>
+
+        <script>
+            // 先把兩個標籤找出來
+            const tabElements = document.querySelectorAll('.tab');
+            const contentElements = document.querySelectorAll('.content');
+
+            //這是第三種方法，也是最常用的方式
+
+            //tabElements.forEach 是按鈕都選一次
+            //(function (tabElement,index) 元素加index是索引值，對應到contenElemnts，才不會對應不到
+            tabElements.forEach(function (tabElement,index){
+
+                //觸發tabElement 監聽事件
+                tabElement.addEventListener('click',function(){
+
+                    //tabElements.forEach 是按鈕都選一次
+                    tabElements.forEach(function(tabElement){
+
+                        //
+                        tabElement.classList.remove('active')
+                    })
+                    //tabElemen可以換成this   this指用在addEventListener點擊的時候
+                    tabElement.classList.add('active');
+
+                    //contentElements.forEach 是按鈕都選一次
+                    contentElements.forEach(function(contentElement){
+                        contentElement.classList.remove('active')
+                    });
+                    contentElements[index].classList.add('active');
+                    console.log(index);
+                });
+            });
+
+        </script>
+    </div>
+
+</body>
+
+</html>

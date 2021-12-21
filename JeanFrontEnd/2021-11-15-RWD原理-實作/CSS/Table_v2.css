@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{    
+    padding: 0px;
+    margin: 0px;
+}
+nav{
+    width: 100%;
+    height: 100px;    
+    background-color: lemonchiffon;    
+    padding: 10px 50px;
+}
+nav .container{
+    width: 100%;
+    height: 80px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container .burger{
+    display: none;
+}
+nav .container .logo{
+    width: 80px;
+    height: 80px;    
+}
+nav .container .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+nav .container .menu{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    list-style: none;
+}
+nav .container .menu li{
+    margin-left: 30px;
+}
+nav .container .menu li a{
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bolder;    
+}
+nav .container .menu a:hover{
+    color: lightgrey;
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: lightblue;
+    padding: 40px 50px;    
+}
+main .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+main .container .box{
+    width: 100%;
+    height: calc(50% - 5px);
+    border-radius: 20px;
+}
+main .container .X{
+    width: 100%;
+    height: calc(50% - 5px);
+    background-image: url('https://gramhir.com/hosted-by-instagram/url=https%3A%7C%7C%7C%7Cscontent-hel3-1.cdninstagram.com%7C%7Cv%7C%7Ct51.2885-15%7C%7Ce35%7C%7Cs1080x1080%7C%7C171188051_218134230071760_5323729396838780226_n.jpg%3F_nc_ht%3Dscontent-hel3-1.cdninstagram.com%26_nc_cat%3D100%26_nc_ohc%3Damqr1Fs0vqkAX_eDrZG%26edm%3DAP_V10EBAAAA%26ccb%3D7-4%26oh%3D99efd78a6b66f02fd9fb137bf4aef78c%26oe%3D61972A8E%26_nc_sid%3D4f375e');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .container .Y{
+    width: calc(50% - 5px);
+    background-image: url('https://i.ppfocus.com/2021/2/868a5fc664df.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .container .Z{
+    width: calc(50% - 5px);
+    background-image: url('https://1.share.photo.xuite.net/brothers586/1117b82/9996561/448973681_m.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

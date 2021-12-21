@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            padding: 100px;
+        }
+
+        #result-number {
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        #result-text {
+            padding: 20px;
+            background-color: lightyellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="calc-bmi">
+            <h1>BMI 計算機</h1>
+            <div class="range-bmi">
+                身高：<input type="text" name="" id="height">cm
+                <br>
+                體重：<input type="text" name="" id="weight">kg
+                <br>
+                <button id="submit" type="submit">計算</button>
+                <button id="reset">重新計算</button>
+                <hr>
+            </div>
+            <section class="result">
+                <h2 class="result-title">你的BMI : </h2>
+                <p id="result-number"></p>
+                <p id="result-text"></p>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        // 宣告在js中身高、體重的input變數
+        var heightElm = document.querySelector('#height');
+        var weightElm = document.querySelector('#weight');
+        // 宣告計算的按鈕
+        var calc = document.querySelector('#submit')
+        // 當calc被click時，要做什麼事
+
+        calc.addEventListener('click', function () {
+            // 轉成正確數值的身高
+            var height = Math.pow((Number(heightElm.value) / 100), 2);
+            // 開始用bmi公式，計算bmi值，並且用bmi這個變數，把計算結果包起來
+            var bmi = weightElm.value / height;
+            // 找到要放入bmi計算結果的div
+            var resNum = document.querySelector('#result-number');
+            // 在resNum這個div內的區域，用innerHTML的語法寫入bmi計算結果
+            resNum.innerHTML = Math.round(bmi * 100) / 100;
+
+            // 判斷bmi計算結過，落入哪個範圍，並且將文字放入result-text這個div中
+            // 宣告result-text這個div，讓js能抓到正確的位置
+            var resText = document.querySelector('#result-text');
+            // 數值判斷
+            if (bmi >= 35) {
+                resText.innerHTML = '過度肥胖，大胖子'
+            } else if (bmi >= 30) {
+                resText.innerHTML = '中度的胖子，還是胖子'
+            } else if (bmi >= 27) {
+                resText.innerHTML = '輕度肥胖，小胖子'
+            } else if (bmi >= 24) {
+                resText.innerHTML = '過重了'
+            } else if (bmi >= 18.5) {
+                resText.innerHTML = '恭喜，標準體。'
+            } else {
+                resText.innerHTML = '令人羨慕的瘦子'
+            };
+        })
+
+        // 重新計算按鈕
+        var restBtn = document.querySelector('#reset');
+        restBtn.addEventListener('click', function () {
+            // 雖然resNum跟resText的變數宣告在計算的btn中宣告過，但沒辦法在這邊用，故重新宣告
+            var resNum = document.querySelector('#result-number');
+            var resText = document.querySelector('#result-text');
+            // 清除div中的文字，直接用innerHTML空白值即可
+            resNum.innerHTML = '';
+            resText.innerHTML = '';
+            // 清除input的值value，直接 = 空白
+            heightElm.value = '';
+            weightElm.value = '';
+        })
+    </script>
+</body>
+
+</html>

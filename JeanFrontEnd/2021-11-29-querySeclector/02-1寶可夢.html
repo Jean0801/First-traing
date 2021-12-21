@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            background-image: var(--img);
+        }
+    </style>
+</head>
+
+<body>
+    電腦 : <img src="./images/pokemon1.png" alt="" id="ai"><br>
+    玩家 : <img src="./images/pokemon2.png" alt="" id="player"><br>
+    對戰結果 : <span id="result">玩家獲勝</span><br>
+    <button id="pokemon1" style="--img:url(./images/pokemon1.png);"></button>
+    <button id="pokemon2" style="--img:url(./images/pokemon2.png);"></button>
+    <button id="pokemon3" style="--img:url(./images/pokemon3.png);"></button>
+
+    <script>
+        var aiElement = document.querySelector('#ai');
+        var playerElement = document.querySelector('#player');
+        var resultElement = document.querySelector('#result');
+        var pokemonElement1 = document.querySelector('#pokemon1');
+        var pokemonElement2 = document.querySelector('#pokemon2');
+        var pokemonElement3 = document.querySelector('#pokemon3');
+        // 1. 選擇寶可夢
+        pokemonElement1.addEventListener('click', function () {
+            // 2. 電腦隨機選一隻寶可夢 1、2、3
+            var ai = Math.floor(Math.random() * 3) + 1;
+            // 3. 比輸贏
+            var result = '';
+            if (ai == 1) {
+                result = '平手';
+            } else if (ai == 2) {
+                result = '電腦獲勝';
+            }else{
+                result = '玩家獲勝';
+            }
+            // 元素，getAttribute(屬性名稱)
+            // 4. 顯示結果
+            aiElement.setAttribute('src', './images/pokemon' + ai + '.png');
+            playerElement.setAttribute('src', './images/pokemon1.png');
+            resultElement.textContent = result;
+            // console.log(aiElement.getAttribute('src'));
+        });
+        pokemonElement2.addEventListener('click', function () {
+            // 2. 電腦隨機選一隻寶可夢 1、2、3
+            var ai = Math.floor(Math.random() * 3) + 1;
+            // 3. 比輸贏
+            var result = '';
+            if (ai == 1) {
+                result = '玩家獲勝';
+            } else if (ai == 2) {
+                result = '平手';
+            }else{
+                result = '電腦獲勝';
+            }
+            // 元素，getAttribute(屬性名稱)
+            // 4. 顯示結果
+            aiElement.setAttribute('src', './images/pokemon' + ai + '.png');
+            playerElement.setAttribute('src', './images/pokemon2.png');
+            resultElement.textContent = result;
+            // console.log(aiElement.getAttribute('src'));
+        });
+        pokemonElement3.addEventListener('click', function () {
+            // 2. 電腦隨機選一隻寶可夢 1、2、3
+            var ai = Math.floor(Math.random() * 3) + 1;
+            // 3. 比輸贏
+            var result = '';
+            if (ai == 1) {
+                result = '電腦獲勝';
+            } else if (ai == 2) {
+                result = '玩家獲勝';
+            }else{
+                result = '平手';
+            }
+            // 元素，getAttribute(屬性名稱)
+            // 4. 顯示結果
+            aiElement.setAttribute('src', './images/pokemon' + ai + '.png');
+            playerElement.setAttribute('src', './images/pokemon3.png');
+            resultElement.textContent = result;
+            // console.log(aiElement.getAttribute('src'));
+        });
+    </script>
+</body>
+
+</html>

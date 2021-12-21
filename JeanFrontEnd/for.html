@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-bottom: 5px;
+            color: rgb(107, 77, 240);
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+
+    <script>
+        // 宣告每個盒子
+        let boxs = document.querySelectorAll('.box');
+        // console.log(boxs)
+        // 每個盒子都選一次
+        boxs.forEach(box => {
+            // 點擊 盒子
+            box.addEventListener('click',function () {
+                // 如果盒子是(等於)淺綠色
+                if (box.style.backgroundColor === 'lightgreen') {
+                    // 那麼盒子就改為粉色
+                    box.style.backgroundColor = 'pink';
+                    // 如果盒子不是(不等於)淺綠色
+                } else {
+                    // 那麼盒子就改為淺綠色
+                    box.style.backgroundColor = 'lightgreen';
+                }
+            })
+        });
+        </script>
+</body>
+</html>

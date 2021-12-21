@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="number1" style="color:blue">+
+    <input type="text" name="" id="number2">=
+    <span id="result" >0</span>
+    <button id="calc" >計算</button>
+
+    <script>
+        // 宣告 輸入第一個數字
+        var numberElement1 = document.querySelector('#number1');
+        // 宣告 輸入第二個數字
+        var numberElement2 = document.querySelector('#number2');
+        // 宣告 結果輸出
+        var resultElement = document.querySelector('#result');
+        // 宣告 按鈕計算
+        var calcElement = document.querySelector('#calc');
+
+
+        // 按下按鈕進行計算
+        calcElement.addEventListener('click', function () {
+            // 參考:
+            // parseInt()、Number()>將字串改成數字的方法
+
+            // 1.取得number1的值.value(原本是string 要改成數字)
+            var number1 = parseInt(numberElement1.value);
+            // 2.取得number的值.value(原本是string 要改成數字)
+            var number2 = parseInt(numberElement2.value);
+            // 3.將number1、number2相加
+            var result = number1 + number2;
+            // 4.輸出答案
+            resultElement.textContent = result;
+        })
+
+    </script>
+
+</body>
+</html>

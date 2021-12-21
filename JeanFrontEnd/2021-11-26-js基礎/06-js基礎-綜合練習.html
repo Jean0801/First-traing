@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>apple</div>
+    <button>按我</button>
+
+
+    <script>
+        // 請製作一個按鈕
+        // 點擊按鈕後修改DIV文字APPLE為hello world!!
+        var divElement = document.querySelector('div');
+        var btnElement = document.querySelector('button');
+        
+        btnElement.addEventListener('click', function () {
+            divElement.innerText = 'hello world!!';
+        });
+    </script>
+</body>
+
+</html>

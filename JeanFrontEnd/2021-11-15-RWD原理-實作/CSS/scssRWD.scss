@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    @media (max-width: 1170px) {
+        display: unset;
+    }
+}
+nav {
+    width: 360px;
+    height: 100vh;
+    background-color: lemonchiffon;
+    padding-top: 100px;
+    @media (max-width: 1170px) {
+        width: 100%;
+        height: 100px;
+        padding: 10px 50px;
+    }
+    .container {
+        width: 100%;
+        @media (max-width: 1170px) {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            position: relative;
+        }
+        #burger-btn{            
+            display: none;
+            &:checked ~ .menu{
+                display: block;
+            }
+        }        
+        .burger {
+            width: 40px;
+            height: 50px;
+            background-image: url(https://i0.wp.com/css-tricks.com/wp-content/uploads/2012/10/threelines.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            display: none;
+            @media (max-width: 768px) {
+                display: inline-block;
+                position: absolute;                
+            }
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-color: lightyellow;
+            margin: 0px auto;
+            @media (max-width: 1170px) {
+                width: 80px;
+                height: 80px;
+                margin: unset;
+            @media (max-width: 768px) {
+                width: 60px;
+                height: 60px;
+                margin: auto;
+            }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }            
+        }
+        .menu {
+            width: 100%;
+            font-size: 21px;
+            list-style: none;
+            text-align: center;
+            padding: 15px;
+            line-height: 40px;
+            @media (max-width: 1170px) {
+                width: 420px;
+                padding: 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+            @media (max-width: 768px) {
+                width: auto;
+                color: red;
+                font-size: 14px;
+                line-height: unset;
+                margin: 0px;
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: -8px;                
+            }
+            li {
+                margin: 7px;
+                a {
+                    width: 100px;
+                    text-decoration: none;
+                    font-weight: bolder;
+                    padding: 10px 0;
+                    @media (max-width: 768px) {
+                        color: red;
+                    }
+                    &:hover {
+                        color: lightgrey;
+                    }
+                }
+            }
+        }
+    }
+}
+main {
+    width: calc(100% - 360px);
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    @media (max-width: 1170px) {
+        width: 100%;
+        height: calc(100vh - 100px);
+        padding: 40px 50px;
+    }
+    @media (max-width: 768px) {
+        padding: unset;
+    }
+    .container {
+        width: 900px;
+        height: 570px;
+        margin: auto;
+        display: flex;
+        @media (max-width: 1330px) {
+            width: 800px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @media (max-width: 1170px) {
+            width: 100%;
+            height: 100%;            
+        }
+        .box {
+            width: 100%;
+            height: 570px;
+            @media (max-width: 1330px) {
+                width: 100%;                
+            }
+        }
+        .X {
+            background-image: url("https://gramhir.com/hosted-by-instagram/url=https%3A%7C%7C%7C%7Cscontent-hel3-1.cdninstagram.com%7C%7Cv%7C%7Ct51.2885-15%7C%7Ce35%7C%7Cs1080x1080%7C%7C171188051_218134230071760_5323729396838780226_n.jpg%3F_nc_ht%3Dscontent-hel3-1.cdninstagram.com%26_nc_cat%3D100%26_nc_ohc%3Damqr1Fs0vqkAX_eDrZG%26edm%3DAP_V10EBAAAA%26ccb%3D7-4%26oh%3D99efd78a6b66f02fd9fb137bf4aef78c%26oe%3D61972A8E%26_nc_sid%3D4f375e");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @media (max-width: 1330px) {
+                width: 100%;
+                height: calc(50% - 5px);
+                background-position: 0 30%;
+                margin-bottom: 10px;
+            }            
+            @media (max-width: 768px) {
+                height: 33.33%;
+                margin-bottom: unset;
+            }
+        }
+        .Y {
+            background-image: url("https://i.ppfocus.com/2021/2/868a5fc664df.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 5px;
+            @media (max-width: 1330px) {
+                width: 49%;
+                height: calc(50% - 5px);
+                margin: 0px;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 33.33%;
+            }
+        }
+        .Z {
+            background-image: url("https://1.share.photo.xuite.net/brothers586/1117b82/9996561/448973681_m.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @media (max-width: 1330px) {
+                width: 49%;
+                height: calc(50% - 5px);
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 33.33%;
+            }
+        }
+    }
+}

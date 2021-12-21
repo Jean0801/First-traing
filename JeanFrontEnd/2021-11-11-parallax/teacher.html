@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.bg-full {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			background-image: url('./img/bg-full.jpg');
+			background-size: cover;
+			background-position: center center;
+			background-attachment: fixed;
+		}
+
+		.bg-full-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0;
+		}
+
+		.bg-text {
+			padding: 70px 80px;
+		}
+
+		.bg-text-title {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		.bg-text-paragraph {
+			margin-bottom: 0;
+		}
+
+		.bg-half {
+			position: relative;
+			width: 100%;
+			height: 40vh;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.bg-half-1 {
+			background-image: url("./img/bg-half-1.jpg");
+		}
+
+		.bg-half-2 {
+			background-image: url("./img/bg-half-2.jpg");
+		}
+
+		.bg-half-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.bg-half-text {
+			padding: 70px 80px;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg-full">
+		<h1 class="bg-full-title">SCROLL DOWN</h1>
+	</div>
+
+	<div class="bg-text">
+		<h2 class="bg-text-title">PARALLAX DEMO</h2>
+		<p class="bg-text-paragraph">Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+	</div>
+
+	<div class="bg-half-1 bg-half">
+		<h1 class="bg-half-title">LESS HEIGHT</h1>
+	</div>
+
+	<div class="bg-half-text">
+		<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+	</div>
+
+	<div class="bg-half-2 bg-half">
+		<h1 class="bg-half-title">SCROLL UP</h1>
+	</div>
+
+	<div class="bg-half-text">
+		<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+	</div>
+
+	<div class="bg-full">
+		<h1 class="bg-full-title">COOL!</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+</head>
+<style>
+    @keyframes backOutDown {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        20% {
+            -webkit-transform: translateY(0px) scale(0.7);
+            transform: translateY(0px) scale(0.7);
+            opacity: 0.7;
+        }
+
+        100% {
+            -webkit-transform: translateY(700px) scale(0.7);
+            transform: translateY(700px) scale(0.7);
+            opacity: 0.7;
+        }
+    }
+
+    .animate__backOutDown {
+        animation-name: backOutDown;
+    }
+
+    .box {
+        width: 200px;
+        height: 50px;
+        background-color: palevioletred;
+        color: #fff;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: center;
+        animation-name: backOutDown;
+    }
+</style>
+
+<body>
+    <div class="box">12345678</div>
+
+</body>
+
+</html>

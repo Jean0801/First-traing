@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+}
+nav{
+    width: 360px;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+main{
+    width: 75%;
+    height: 100vh;
+    background-color: lightsteelblue;
+}

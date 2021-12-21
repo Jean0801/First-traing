@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 選擇棄有優先級，ID選擇器比標籤選擇棄優先 */
+        /* 當優先級一樣時，後寫的屬性會覆蓋前面的屬性
+        沒覆蓋的屬性則沿用。 */
+        div {
+            /* 註解ctrl+/背景顏色 */
+            background-color: red;
+            width: 100px; height: 100px;
+        }
+        /* #ID名稱{} */
+        #box1 {
+            background-color: blue;
+        }
+        #box2 {
+            background-color: yellow;
+        }
+        #box3 {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!--這邊是註解ctrl+/內文-->
+    <!-- ID，必須是唯一的，是英文字或+數字 -->
+    <div id="box1">hello
+        <div class="small-box">
+            test
+        </div>
+    </div>
+    <div id="box2">hi</div>
+    <div id="box3">你好</div>
+    
+</body>
+</html>

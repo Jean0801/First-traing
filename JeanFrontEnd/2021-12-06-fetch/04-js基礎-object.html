@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // JSON (JavaScript Object Notation)
+        // object
+        // 資料以key:value 儲存，每筆資料以逗號分隔
+        // key命名方式
+        // 1.不要中文或純數字
+        // 2.純英文或英數組合皆可
+        // 3.以雙引號包住
+        // let data = {
+        //     "name":"leo",
+        //     "age":28
+        // };
+        // console.log(data);
+        // 用陣列方式['']讀取值
+        // console.log(data['name']);
+
+        // 修改
+        // data['name'] = 'jack';
+        // console.log(data);
+
+        //
+        // data['gender'] = 'male';
+        // console.log(data);
+
+        //  移除
+        // delete data['age'];
+        // console.log(data);
+
+        let data = {
+            "name":"leo",
+            "data":{
+                "time":"13:43",
+                "data":"2021-12-06",
+                "student":["a","b","c","d","e","f"]
+            }
+        }
+        // e , leo , 13:43 取上述資料 用陣列的方式取
+        console.log(data['data']['student'][4]);
+        console.log(data['name']);
+        console.log(data['data']['time']);
+
+
+    </script>
+</body>
+</html>

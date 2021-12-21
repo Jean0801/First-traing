@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS選擇器</title>
+    <style>
+        ul {
+    width: 200px;
+    background: #292929;
+    color: white;
+    list-style: none;
+    padding-left: 0;
+}
+
+        li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #3c3c3c;
+}
+
+li:first-child {
+    border-top: none;
+}
+
+li:last-child {
+   border-bottom: none;
+}
+
+    </style>
+</head>
+<body>
+    <ul>
+    <li> List Item </li>
+    <li> List Item </li>
+    <li> List Item </li>
+    </ul>
+</body>
+</html>

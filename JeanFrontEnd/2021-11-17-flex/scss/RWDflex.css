@@ -1,0 +1,262 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1170px) {
+  body {
+    display: unset;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  width: 360px;
+  height: 100vh;
+  background-color: #ddccff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+}
+
+@media (max-width: 1170px) {
+  nav {
+    width: 100%;
+    height: 100px;
+    padding: 10px 10px;
+  }
+}
+
+nav .container {
+  height: 250px;
+}
+
+@media (max-width: 1170px) {
+  nav .container {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+nav .container .burger {
+  width: 40px;
+  height: 70px;
+  background-color: #ba55d3;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .container .burger {
+    display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+nav .container .logo {
+  width: 150px;
+  height: 150px;
+  background-color: #884dff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1170px) {
+  nav .container .logo {
+    width: 80px;
+    height: 80px;
+    margin: 0px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .container .logo {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+}
+
+nav .container .menu {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1170px) {
+  nav .container .menu {
+    width: 420px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .container .menu {
+    display: none;
+  }
+}
+
+main {
+  width: calc(100% - 360px);
+  height: 100vh;
+  background-color: #ccb3ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1170px) {
+  main {
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: unset;
+  }
+}
+
+main .container {
+  width: 900px;
+  height: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1330px) {
+  main .container {
+    width: 800px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1170px) {
+  main .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main .container .box {
+  width: 100%;
+  height: 570px;
+}
+
+@media (max-width: 1330px) {
+  main .container .box {
+    width: 100%;
+  }
+}
+
+main .container .x {
+  width: 33.33%;
+  height: 100%;
+  background-color: #bb99ff;
+}
+
+@media (max-width: 1330px) {
+  main .container .x {
+    width: 100%;
+    height: calc(50% - 5px);
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .x {
+    height: 33.33%;
+    margin-bottom: unset;
+  }
+}
+
+main .container .y {
+  width: 33.33%;
+  height: 100%;
+  background-color: #aa80ff;
+  margin: 0 3px;
+}
+
+@media (max-width: 1330px) {
+  main .container .y {
+    width: calc(50% - 3px);
+    height: calc(50% - 5px);
+    margin: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .y {
+    width: 100%;
+    height: 33.33%;
+  }
+}
+
+main .container .z {
+  width: 33.33%;
+  height: 100%;
+  background-color: #9966ff;
+}
+
+@media (max-width: 1330px) {
+  main .container .z {
+    width: calc(50% - 3px);
+    height: calc(50% - 5px);
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .z {
+    width: 100%;
+    height: 33.33%;
+  }
+}
+/*# sourceMappingURL=RWDflex.css.map */

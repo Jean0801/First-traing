@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook仿切</title>
+    <style>
+        body {
+			background-color:#666;
+			margin: 0;
+			padding: 0;
+		}
+
+        #wrap {
+			width: 1280px;
+			height: 500px;
+			margin: 0 auto;
+		}
+
+        #top {
+			width: 100%;
+			height: 60px;
+			background-color: #395591;
+		}
+
+		#logo {
+			width: 36px;
+			margin: 12px;
+			vertical-align: middle;
+		}
+
+		#search {
+			width: 394px;
+			padding: 10px;
+			border-radius: 5px;
+			font-size: 20px;
+			vertical-align: middle;
+		}
+
+		#middle {
+			position: relative;
+			width: 100%;
+			height: 376px;
+			background-color: #333;
+		}
+
+        #avatar {
+			position: absolute;
+			left: 19px;
+			bottom: -42px;
+			width: 210px;
+			height: 210px;
+			background-color: #aaa;
+			border: solid 1px #eee;
+		}
+
+		#data-btns {
+			position: absolute;
+			right: 19px;
+			bottom: 19px;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+		}
+
+		#data-btns>li {
+			display: inline-block;
+			background-color: #fff;
+			padding: 7px;
+			margin-left: 19px;
+			font-size: 14px;
+		}
+
+        #bottom {
+			width: 100%;
+			height: 64px;
+			background-color: #fff;
+		}
+
+		#event-btns {
+			margin: 0;
+			margin-left: 255px;
+			padding: 0;
+		}
+
+		#event-btns>li {
+			display: inline-block;
+			padding: 21px 25px;
+			border-right: solid 1px #ccc;
+			color: #335491;
+		}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top">
+            <img id="logo" src="http://www.freeiconspng.com/uploads/images-facebook-f-logo-png-transparent-background-page-2-29.png" alt="">
+			<input id="search" type="text" placeholder="搜尋人、地點、事物">
+        </div>
+        <div id="middle">
+            <div id="avatar"></div>
+			<ul id="data-btns">
+				<li>更新資料</li>
+				<li>查看活動資料</li>
+			</ul>
+        </div>
+        <div id="bottom">
+            <ul id="event-btns">
+				<li>動態時報</li>
+				<li>關於</li>
+				<li>朋友</li>
+				<li>相片</li>
+				<li>更多</li>
+			</ul>
+        </div>
+    </div>
+</body>
+</html>

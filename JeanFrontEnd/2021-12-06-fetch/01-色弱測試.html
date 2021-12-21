@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #F06060;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: calc(100% / var(--side));
+            height: calc(100% / var(--side));
+            background-color: var(--color);
+            border: 5px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .box.anwser {
+            /* 盒子的答案 使用透明度 opacity ，opactiy 依照邊寬高的多寡 增加難度 */
+            opacity: calc(var(--side) / 11);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+
+    <script>
+        // 宣告 container
+        const containerElement = document.querySelector('.container');
+        // 單邊個數
+        let side = 2;
+        // 每一種難度玩的次數，索引值0、1隨意填
+        let times = [1, 1, 1, 1, 1, 2, 3, 4, 5, 99999];
+        // 計算當前難度遊玩次數
+        let count = 1;
+        function generateColor() {
+            return (Math.floor(Math.random() * 185) + 16).toString(16);
+        }
+        function createBox() {
+            let boxes = '';
+            // 0 ~ 總數-1 的隨機數
+            let anwser = Math.floor(Math.random() * side ** 2);
+            // 產生RGB的三色數值
+            let color = generateColor() + generateColor() + generateColor();
+
+            let style = `style="--side:${side};--color:#${color};"`;
+            for (let i = 0; i < side ** 2; i++) {
+
+                if (i == anwser) {
+                    boxes += `<div class="box anwser" ${style}></div>`;
+                } else {
+                    boxes += `<div class="box" ${style}></div>`;
+                }
+            }
+            containerElement.innerHTML = boxes;
+        }
+        function anwserSetting() {
+            const anwserElement = document.querySelector('.box.anwser');
+            anwserElement.addEventListener('click', function () {
+                if (count == times[side]) {
+                    count = 1;
+                    side += 1;
+                } else {
+                    count += 1;
+                }
+                resetContainer();
+            });
+        }
+        function resetContainer() {
+            createBox();
+            anwserSetting();
+        }
+
+        resetContainer();
+        // 1. 變換顏色
+        // 2. 變換數量
+        // 3. 難度(透明度)
+        // 4. 計分
+        // 5. 計時
+        // 6. 暫停
+    </script>
+</body>
+
+</html>

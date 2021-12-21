@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        // var divElement = document.querySelector('div');
+        // console.log(divElement);
+
+        var divElement = document.querySelectorAll('div');
+        console.log(divElement);
+        // i = 5 全域
+        // let const
+
+
+        // for(var i = 0;i < 5;i++){
+        //     divElement[i].addEventListener('click',function(){
+        //         console.log(divElement[i]);
+        //         divElement[i].style.backgroundColor= 'pink';
+        //     })
+        // }
+
+        for(let i = 0;i < 5;i++){
+            divElement[i].addEventListener('click',function(){
+                //this 是指點到的人
+                // console.log(divElements)
+                // divElements[i].style.backgroundColor= 'pink';
+
+                // console.log(this);
+                // this.style.backgroundColor= 'pink';
+
+                // function(event)
+                console.log(event.target);
+                event.target.style.backgroundColor = 'pink';
+            })
+        }
+
+    </script>
+</body>
+</html>

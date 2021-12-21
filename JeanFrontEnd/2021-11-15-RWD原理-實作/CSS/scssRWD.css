@@ -1,0 +1,300 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1170px) {
+  body {
+    display: unset;
+  }
+}
+
+nav {
+  width: 360px;
+  height: 100vh;
+  background-color: lemonchiffon;
+  padding-top: 100px;
+}
+
+@media (max-width: 1170px) {
+  nav {
+    width: 100%;
+    height: 100px;
+    padding: 10px 50px;
+  }
+}
+
+nav .container {
+  width: 100%;
+}
+
+@media (max-width: 1170px) {
+  nav .container {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .container {
+    position: relative;
+  }
+}
+
+nav .container #burger-btn {
+  display: none;
+}
+
+nav .container #burger-btn:checked ~ .menu {
+  display: block;
+}
+
+nav .container .burger {
+  width: 40px;
+  height: 50px;
+  background-image: url(https://i0.wp.com/css-tricks.com/wp-content/uploads/2012/10/threelines.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .container .burger {
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+nav .container .logo {
+  width: 150px;
+  height: 150px;
+  background-color: lightyellow;
+  margin: 0px auto;
+}
+
+@media (max-width: 1170px) {
+  nav .container .logo {
+    width: 80px;
+    height: 80px;
+    margin: unset;
+  }
+}
+
+@media (max-width: 1170px) and (max-width: 768px) {
+  nav .container .logo {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+  }
+}
+
+nav .container .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav .container .menu {
+  width: 100%;
+  font-size: 21px;
+  list-style: none;
+  text-align: center;
+  padding: 15px;
+  line-height: 40px;
+}
+
+@media (max-width: 1170px) {
+  nav .container .menu {
+    width: 420px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .container .menu {
+    width: auto;
+    color: red;
+    font-size: 14px;
+    line-height: unset;
+    margin: 0px;
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: -8px;
+  }
+}
+
+nav .container .menu li {
+  margin: 7px;
+}
+
+nav .container .menu li a {
+  width: 100px;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  nav .container .menu li a {
+    color: red;
+  }
+}
+
+nav .container .menu li a:hover {
+  color: lightgrey;
+}
+
+main {
+  width: calc(100% - 360px);
+  height: 100vh;
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1170px) {
+  main {
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: unset;
+  }
+}
+
+main .container {
+  width: 900px;
+  height: 570px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1330px) {
+  main .container {
+    width: 800px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1170px) {
+  main .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main .container .box {
+  width: 100%;
+  height: 570px;
+}
+
+@media (max-width: 1330px) {
+  main .container .box {
+    width: 100%;
+  }
+}
+
+main .container .X {
+  background-image: url("https://gramhir.com/hosted-by-instagram/url=https%3A%7C%7C%7C%7Cscontent-hel3-1.cdninstagram.com%7C%7Cv%7C%7Ct51.2885-15%7C%7Ce35%7C%7Cs1080x1080%7C%7C171188051_218134230071760_5323729396838780226_n.jpg%3F_nc_ht%3Dscontent-hel3-1.cdninstagram.com%26_nc_cat%3D100%26_nc_ohc%3Damqr1Fs0vqkAX_eDrZG%26edm%3DAP_V10EBAAAA%26ccb%3D7-4%26oh%3D99efd78a6b66f02fd9fb137bf4aef78c%26oe%3D61972A8E%26_nc_sid%3D4f375e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1330px) {
+  main .container .X {
+    width: 100%;
+    height: calc(50% - 5px);
+    background-position: 0 30%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .X {
+    height: 33.33%;
+    margin-bottom: unset;
+  }
+}
+
+main .container .Y {
+  background-image: url("https://i.ppfocus.com/2021/2/868a5fc664df.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 5px;
+}
+
+@media (max-width: 1330px) {
+  main .container .Y {
+    width: 49%;
+    height: calc(50% - 5px);
+    margin: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .Y {
+    width: 100%;
+    height: 33.33%;
+  }
+}
+
+main .container .Z {
+  background-image: url("https://1.share.photo.xuite.net/brothers586/1117b82/9996561/448973681_m.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1330px) {
+  main .container .Z {
+    width: 49%;
+    height: calc(50% - 5px);
+  }
+}
+
+@media (max-width: 768px) {
+  main .container .Z {
+    width: 100%;
+    height: 33.33%;
+  }
+}
+/*# sourceMappingURL=scssRWD.css.map */

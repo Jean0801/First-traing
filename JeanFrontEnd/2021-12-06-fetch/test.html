@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			width: 100%;
+			min-height: 100vh;
+			background-color: #F06060;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			width: 500px;
+			height: 500px;
+			background-color: #ddd;
+			border-radius: 10px;
+			padding: 10px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.box {
+			width: 50%;
+			height: 50%;
+			background-color: rgb(144, 12, 5);
+			border: 5px solid #ddd;
+			border-radius: 10px;
+		}
+
+		.box.answer {
+			opacity: 0.5;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	</div>
+	<script>
+
+		const containerElement = document.querySelector('.container');
+
+		let side = 3;
+		console.log(typeof (side));
+
+		function createBox() {
+			let boxes = '';
+			let answer = Math.floor(Math.random() * side ** 2);
+			for (let i = 0; i < side ** 2; i++) {
+				if (i == answer) {
+					// boxes += '<div class="box answer"></div>'
+					boxes += `<div class="box answer" style="height:calc(100% / ${side}); width:calc(100% / ${side})"></div>`;
+				} else {
+					// boxes += '<div class="box"></div>';
+					boxes += `<div class="box" style="height:calc(100% / ${side}); width:calc(100% / ${side})"></div>`;
+				}
+			}
+			containerElement.innerHTML = boxes;
+		}
+
+		function answerSetting() {
+			const answerElement = document.querySelector('.box.answer');
+			answerElement.addEventListener('click', function () {
+				// let boxsize = document.querySelector(".box");
+				side += 1;
+				// boxsize.style.width = "calc(100% / side);
+				// boxsize.style.height = "calc(100% / side);
+				resetContainer();
+			});
+		}
+
+		function resetContainer() {
+			createBox();
+			answerSetting();
+		}
+
+		resetContainer();
+
+        // 1. 變換顏色
+        // 2. 變換數量
+        // 3. 難度(透明度)
+        // 4. 計分
+        // 5. 計時
+        // 6. 暫停
+	</script>
+</body>
+
+</html>

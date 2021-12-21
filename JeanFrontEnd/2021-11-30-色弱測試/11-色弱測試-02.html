@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f06060;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 50%;
+            height: 50%;
+            background-color: brown;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .box.anwser {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box anwser "></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        // 放東西進containerElement
+        const containerElement = document.querySelector('.container');
+        // 單邊的個數
+        let side = 2;
+
+        function createBox() {
+            let boxes = '';
+            // 取出 0~總數-1 之間的隨機數
+            let anwser = Math.floor(Math.random() * side ** 2);
+            // console.log(anwser);
+            for (let i = 0; i < side ** 2; i++) {
+                if (i == anwser) {
+                    boxes += '<div class="box anwser"></div>';
+                } else {
+                    boxes += '<div class="box"></div>';
+                }
+            }
+            containerElement.innerHTML = boxes;
+        }
+    function anwserSetting() {
+        const anwserElement = document.querySelector('.box.anwser');
+        anwserElement.addEventListener('click',function(){
+            resetContainer();
+        })
+    }
+    function resetContainer() {
+        createBox();
+        anwserSettint();
+    }
+
+    </script>
+</body>
+
+</html>
