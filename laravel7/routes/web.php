@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 根據請求，對應到相對的controller
+
+// Route::get('/page','NewsController@index');
+
+// Route::get('/blog',function(){
+//     return view('blog');
+// });
+
+// Route::get('/blog-create',function(){
+//     return view('blog-create');
+// });
+// 檢視(列表')
+Route::get('/blog', 'BlogController@index');
+
+// 新增一篇文章，create是叫出新增的頁面，store是將資料存入資料庫中的操作
+Route::get('/blog-create', 'BlogController@create');
+
+Route::post('/blog/store', 'BlogController@store');
+
+// laravel的路由中，可以利用{}花括弧 去將網址的特定區段轉換成變數，編輯/刪除
+Route::get('/blog/edit/{id}', 'BlogController@edit');
+Route::POST('/blog/update/{id}', 'BlogController@update');
+
+// 刪除
+Route::get('/blog/delete/{id}', 'BlogController@delete');
