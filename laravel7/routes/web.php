@@ -29,17 +29,16 @@ Route::get('/', function () {
 // Route::get('/blog-create',function(){
 //     return view('blog-create');
 // });
-// 檢視(列表')
+// (R：讀取)檢視(列表')
 Route::get('/blog', 'BlogController@index');
 
-// 新增一篇文章，create是叫出新增的頁面，store是將資料存入資料庫中的操作
-Route::get('/blog-create', 'BlogController@create');
-
+// (C：新增)新增一篇文章，create是叫出新增的頁面，store是將資料存入資料庫中的操作
+Route::get('/blog/create', 'BlogController@create');
 Route::post('/blog/store', 'BlogController@store');
 
-// laravel的路由中，可以利用{}花括弧 去將網址的特定區段轉換成變數，編輯/刪除
+// (U：更新)laravel的路由中，可以利用{}花括弧 去將網址的特定區段轉換成變數，編輯/刪除
 Route::get('/blog/edit/{id}', 'BlogController@edit');
 Route::POST('/blog/update/{id}', 'BlogController@update');
 
-// 刪除
-Route::get('/blog/delete/{id}', 'BlogController@delete');
+// (D：刪除)刪除
+Route::get('/blog/destroy/{id}', 'BlogController@destroy');

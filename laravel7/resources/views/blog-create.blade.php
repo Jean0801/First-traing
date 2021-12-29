@@ -15,8 +15,8 @@
 				<input type="text" name="title" id="title">
 			</div>
 			<div class="row">
-				<label for="auther">文章作者：</label>
-				<input type="text" name="auther" id="auther">
+				<label for="auther1">文章作者：</label>
+				<input type="text" name="auther1" id="auther1">
 			</div>
 			<div class="row custom">
 				<label for="content">文章內文：</label>
