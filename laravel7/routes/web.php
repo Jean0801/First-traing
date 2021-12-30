@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/news', 'FrontController@newsIndex');
+Route::get('/products', 'FrontController@productsIndex');
+
 
 // 根據請求，對應到相對的controller
 
