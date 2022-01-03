@@ -18,7 +18,8 @@
             @foreach ($articles as $article)
                 <div class="message-card">
                     <div class="msg-info">
-                        <div class="title">{{ $article->title }}</div>
+                        <a href="/news/content/{{$article->id}}">{{ $article->title }}</a>
+                        {{-- <div class="title" >{{ $article->title }}</div> --}}
                         <div class="auther">{{ $article->auther1 }}</div>
                         <div class="post-time">{{ $article->created_at }}</div>
                     </div>

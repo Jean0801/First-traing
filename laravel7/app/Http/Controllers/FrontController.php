@@ -13,6 +13,12 @@ class FrontController extends Controller
         return view('front.news.index', compact('articles'));
     }
 
+    public function newsContent($id)
+    {
+        $article = Article::find($id);
+        return view('front.news.content', compact('article'));
+    }
+
     public function productsIndex()
     {
         return view('front.products.index');

@@ -14,23 +14,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// 前台首頁
+
 Route::get('/', function () {
     return view('index');
 });
 
-// 前台最新消息
 Route::get('/news', 'FrontController@newsIndex');
-Route::get('/news/content/{id}', 'FrontController@newsContent');
-
-// 前台所有商品
 Route::get('/products', 'FrontController@productsIndex');
-Route::get('/products/content/{id}', 'FrontController@productsContent');
 
-// blog相關
+
+// 根據請求，對應到相對的controller
+
+// Route::get('/page','NewsController@index');
+
+// Route::get('/blog',function(){
+//     return view('blog');
+// });
+
+// Route::get('/blog-create',function(){
+//     return view('blog-create');
+// });
+// (R：讀取)檢視(列表')
 Route::get('/blog', 'BlogController@index');
+
+// (C：新增)新增一篇文章，create是叫出新增的頁面，store是將資料存入資料庫中的操作
 Route::get('/blog/create', 'BlogController@create');
 Route::post('/blog/store', 'BlogController@store');
+
+// (U：更新)laravel的路由中，可以利用{}花括弧 去將網址的特定區段轉換成變數，編輯/刪除
 Route::get('/blog/edit/{id}', 'BlogController@edit');
 Route::POST('/blog/update/{id}', 'BlogController@update');
+
+// (D：刪除)刪除
 Route::get('/blog/destroy/{id}', 'BlogController@destroy');
