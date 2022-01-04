@@ -36,7 +36,7 @@
 
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                        <div class="bg-white rounded shadow-sm"><img src="./AB-img/cake-strawberry.jpg" alt=""
+                        <div class="bg-white rounded shadow-sm"><img src="{{ asset('/img/cake-strawberry.jpg') }}" alt=""
                                 class="img-fluid card-img-top">
                             <div class="p-4">
                                 <h5> <a href="#" class="text-dark">法式草莓費雪蛋糕</a></h5>

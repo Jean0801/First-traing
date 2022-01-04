@@ -1,5 +1,8 @@
 .nav-item{
     letter-spacing: 3px;
+	@media (max-width: 1200px) {
+		letter-spacing: unset;
+	}
 }
 
 i{

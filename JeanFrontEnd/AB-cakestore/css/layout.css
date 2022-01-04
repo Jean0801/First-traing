@@ -2,6 +2,12 @@
   letter-spacing: 3px;
 }
 
+@media (max-width: 1200px) {
+  .nav-item {
+    letter-spacing: unset;
+  }
+}
+
 i {
   font-size: 22px;
 }
