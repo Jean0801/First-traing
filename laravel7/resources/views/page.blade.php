@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layouts.template')
 
 @section('content')
     {{-- $a = 0;
@@ -47,7 +47,7 @@
                     <button type="button" class="btn btn-secondary mb-5">View details »</button>
                 </div>
             @endforeach
-            
+
         </div>
     </div>
 @endsection

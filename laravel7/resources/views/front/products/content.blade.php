@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layouts.template')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('/css/productshop.css') }}">

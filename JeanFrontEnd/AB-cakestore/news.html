@@ -20,7 +20,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #faf4f4;">
 		<div class="container">
-			<a class="navbar-brand" href="./AtelierBauloiscake.html">
+			<a class="navbar-brand" href="./threeindex.html">
 				<img src="./AB-img/storelogo.jpg" width="70" height="65" class="rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,15 +30,15 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<div class="nav-item">
 						<a class="nav-link" href="./news.html">最新消息</a>
-					</li>
-					<li class="nav-item">
+					</div>
+					<div class="nav-item">
 						<a class="nav-link" href="./allproduct.html">全部商品</a>
-					</li>
-					<li class="nav-item">
+					</div>
+					<div class="nav-item">
 						<a class="nav-link" href="#">四吋蛋糕</a>
-					</li>
+					</div>
 					<div class="nav-item">
 						<a class="nav-link" href="#">節慶蛋糕</a>
 					</div>
@@ -77,73 +77,94 @@
 		</div>
 	</nav>
 
-    <main class="container">
-		<div class="function-area">
-			<a href="./news-create.html" class="btn btn-primary">新增貼文</a>
-		</div>
-		<div id="message">
-			<div class="message-card">
-				<div class="msg-info">
-					<div class="title">這是測試標題</div>
-					<div class="auther">文章作者</div>
-					<div class="post-time">po文時間</div>
+    <main>
+		<section class="news_title py-3 mb-3">
+			<div class="container">
+				<div class="title d-flex flex-column align-items-center">
+					<img class="mb-3" src="./AB-img/news_icon.svg" width="70px" alt="">
+					<h2 class="mb-3 font-weight-bold">最新消息</h2>
 				</div>
-				<div class="msg-content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam quia tempora similique consequuntur, deserunt ipsam error molestias ullam quaerat tempore, qui necessitatibus sequi expedita quasi libero dolorum natus pariatur!
-
-				</div>
+				<ul class="d-flex justify-content-end">
+					<li class="px-3">
+						<span>資料總筆數：</span>
+						<span class="text-danger">47</span>
+					</li>
+					<li class="px-3">
+						<span>每頁筆數：</span>
+						<span class="text-danger">10</span>
+					</li>
+					<li class="px-3">
+						<span>總頁數：</span>
+						<span class="text-danger">5</span>
+					</li>
+					<li>
+						<span>目前頁次：</span>
+						<span class="text-danger">1</span>
+					</li>
+				</ul>
+				<hr>
 			</div>
-		</div><hr>
-
-		<div id="message">
-			<div class="message-card">
-				<div class="msg-info">
-					<div class="title">這是測試標題</div>
-					<div class="auther">文章作者</div>
-					<div class="post-time">po文時間</div>
+		</section>
+		<section class="news_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-4">
+						<img class="w-100" src="./AB-img/smcake01.jpg"  alt="">
+					</div>
+					<div class="col-8">
+						<h5 class="bg-info bg-gradient text-white bg-opacity-75 d-inline-flex p-2 bd-highlight text-center mb-4">最新消息</h5>
+						<h3 class="outline mb-4"><a href="./news-page.html" target="_self">青洲灣派對來襲 邀你大鵬灣渡冬</a></h3>
+						<h4 class="text-danger mb-3 fs-3">2022-01-07</h4>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas possimus est quis minima quia delectus qui quae vitae id, odio ut! Quis sequi porro autem laudantium, eligendi praesentium at ab.</p>
+					</div>
 				</div>
-				<div class="msg-content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam quia tempora similique consequuntur, deserunt ipsam error molestias ullam quaerat tempore, qui necessitatibus sequi expedita quasi libero dolorum natus pariatur!
-
+				<hr class="my-5">
+				<div class="row">
+					<div class="col-4">
+						<img class="w-100" src="./AB-img/smcake01.jpg"  alt="">
+					</div>
+					<div class="col-8">
+						<h5 class="bg-info bg-gradient text-white bg-opacity-75 d-inline-flex p-2 bd-highlight text-center mb-4">最新消息</h5>
+						<h3 class="outline mb-4"><a href="./news-page.html" target="_self">青洲灣派對來襲 邀你大鵬灣渡冬</a></h3>
+						<h4 class="text-danger mb-3 fs-3">2022-01-07</h4>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas possimus est quis minima quia delectus qui quae vitae id, odio ut! Quis sequi porro autem laudantium, eligendi praesentium at ab.</p>
+					</div>
 				</div>
+				<hr class="my-5">
 			</div>
-		</div><hr>
-
-		<div id="message">
-			<div class="message-card">
-				<div class="msg-info">
-					<div class="title">這是測試標題</div>
-					<div class="auther">文章作者</div>
-					<div class="post-time">po文時間</div>
-				</div>
-				<div class="msg-content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam quia tempora similique consequuntur, deserunt ipsam error molestias ullam quaerat tempore, qui necessitatibus sequi expedita quasi libero dolorum natus pariatur!
-
-				</div>
-			</div>
-		</div>
+		</section>
 	</main>
 
-	<footer>
-		<section class="py-5">
-			<div class="container" style="background-color: #faf4f4;">
-				<div class="row">
-					<div class="col ml-5">
-						<img class="img" src="./AB-img/storelogo.jpg" width="100" height="100" alt="" >
-						<h3>Aatelier Baulois</h3>
-						<h4>法國人的甜點店</h4>
+    <footer>
+		<section class="py-3">
+			<div class="container p-0">
+				<div class="row row-cols-lg-3">
+					<div class="col-12 d-flex flex-column justify-content-lg-center align-items-center mb-3 mb-lg-0">
+						<div class="footer_card d-flex justify-content-lg-center align-items-center">
+							<img class="img" src="./AB-img/storelogo.jpg" width="100px" height="100px" class="rounded-circle" alt="">
+							<div class="store_name">
+								<h3>Aatelier Baulois</h3>
+								<h4>法國人的甜點店</h4>
+							</div>
+						</div>
+						<div class="footer_media">
+							<a href="https://www.facebook.com/atelierbaulois/" class="icon fb">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="#" class="icon ig">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
 					</div>
-					<div class="col mr-5 mt-2">
-						<div class="footer-title">
+					<div class="col-12 mb-3 mb-lg-0">
+						<div class="footer_store">
 							<h5>北屯店</h5>
-							<span >
+							<span>
 								實體店址：台中市北屯區崇德一路46號<br>
 								聯絡電話：<a href="tel://(04)22436066">04-22436066</a><br>
 								營業時間：13:00~20:00(週三公休)<br>
 							</span>
-							<div class="shop2 mb-2">
-								<hr>
-							</div>
+							<hr class="store_line">
 							<h5>南區店</h5>
 							<span>
 								實體店址：台中市南區南陽街61號<br>
@@ -152,26 +173,19 @@
 							</span>
 						</div>
 					</div>
-					<div class="col">
-						<ul class="sci">
-							<li><a href="https://www.facebook.com/atelierbaulois">
-								<i class="fab fa-facebook-f"></i></li>
-							</a>
-							<li><i class="fab fa-instagram"></i></li>
-						</ul>
-						<div class="footwe-title-right">
+					<div class="col-12">
+						<div class="footer_map">
 							<iframe allowfullscreen="" aria-hidden="false" frameborder="0" scrolling="no"
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.9521792357!2d120.65323511498875!3d24.13831748439956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da53912def5%3A0x96ec3fff79ef1ec9!2zNDAz5Y-w5Lit5biC6KW_5Y2A5aSn5b-g5Y2X6KGXODblt7cxMOiZnw!5e0!3m2!1szh-TW!2stw!4v1588579109565!5m2!1szh-TW!2stw"
-								width="100%"></iframe>
+								width="100%" height="100%"></iframe>
 						</div>
 					</div>
 				</div>
-			</div><hr>
-			<div class="container">
-				<p class="last" >© 隱私權條款</p>
-
 			</div>
-
+			<hr>
+			<div class="container">
+				<p class="last">Copyright © 2020 Jean. All rights reserved.</p>
+			</div>
 		</section>
 	</footer>
 

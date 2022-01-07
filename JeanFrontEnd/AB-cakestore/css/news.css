@@ -1,40 +1,21 @@
-main .function-area {
-  padding: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-main #message {
-  width: 100%;
-  background-color: #edf7fd;
-  padding: 20px 100px;
+ul {
+  list-style: none;
 }
 
-main #message .message-card {
-  padding: 10px;
-  margin-bottom: 30px;
+.news_content .outline a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-main #message .message-card .msg-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-main #message .message-card .msg-info .title {
-  font-size: 30px;
-  margin-right: 30px;
-}
-
-main #message .message-card .msg-info .auther {
-  margin-right: auto;
+.news_content .outline a:hover {
+  color: red;
 }
 /*# sourceMappingURL=news.css.map */

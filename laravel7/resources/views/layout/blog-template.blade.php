@@ -58,7 +58,7 @@
 							<i class="fas fa-user"></i>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="./login.html">Login</a>
+							<a class="dropdown-item" href="">Login</a>
 						</div>
 					</li>
 				</ul>

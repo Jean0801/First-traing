@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,7 @@ Route::post('/blog/store', 'BlogController@store');
 Route::get('/blog/edit/{id}', 'BlogController@edit');
 Route::POST('/blog/update/{id}', 'BlogController@update');
 Route::get('/blog/destroy/{id}', 'BlogController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
