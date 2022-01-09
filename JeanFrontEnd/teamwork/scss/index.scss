@@ -1,64 +1,202 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.box{
+body {
+    background-color: #f3ede0;
+}
+.box {
     color: #ff7f26;
     color: #00263a;
     color: #ff4040;
     color: #f8f2d8;
-
 }
 // nav
 
-
 // 首頁大圖區
-.home{
+.home {
     background: url("../team-img/pic1030px/13.png");
     background-size: cover;
     height: 100vh;
     min-height: 500px;
     color: cornsilk;
-    .container{
+    .container {
         height: 100vh;
         // margin: auto 100px;
-        .home-content{
+        .home-content {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            ul{
+            ul {
                 display: flex;
                 justify-content: flex-end;
                 margin-right: 40px;
-                a{
+                a {
                     color: rgb(250, 250, 249);
                     text-decoration: none;
                     font-size: 18px;
                     font-weight: 600;
-                    &:hover{
+                    &:hover {
                         color: #f7ee9c;
-                        box-shadow: 10px 10px 5px rgba($color: #f7ee9c, $alpha: 1.0);
+                        box-shadow: 10px 10px 5px rgba($color: #f7ee9c, $alpha: 1);
                     }
                 }
             }
-            .home-content-left{
+            .home-content-left {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                h1, h2{
+                h1,
+                h2 {
                     font-size: 75px;
                     font-weight: 600;
-                    color: #647D5C;
+                    color: #647d5c;
                 }
-                .text-4{
-                    .btn{
-                        color: #D56246;
+                .text-4 {
+                    .btn {
+                        color: #d56246;
                         font-weight: 600;
-                        &:hover{
+                        &:hover {
                             color: #f0bbc7;
                             transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    .comment_card {
+        width: 100%;
+        height: 400px;
+        max-height: 400px;
+        display: flex;
+        border-radius: 10%;
+        .imgBx {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5%;
+            }
+        }
+    }
+}
+.container {
+    .btn {
+        font-size: 20px;
+        font-weight: 600;
+        &:hover {
+            color: #647d5c;
+            transform: scale(1.2);
+            transition: 0.2s;
+            box-shadow: 5px 5px 1px rgba(105, 105, 105, 0.3);
+        }
+    }
+}
+.step {
+    // width: 1400px;
+    height: 100vh;
+    .container {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        .row {
+            justify-content: center;
+            .card {
+                width: calc(100% - 667px);
+                height: 600px;
+                display: flex;
+                margin: auto;
+                background-color: #f3ede0;
+                // border-radius: 15px;
+
+                .col {
+                    padding: 20px;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        .halfway {
+                            width: 250px;
+                            border: 1px solid #fff;
+                            border-radius: 10px;
+                            background-color: rgb(253, 253, 253);
+                            &:hover {
+                                transform: scale(1.2);
+                                transition: 0.3s;
+                                box-shadow: 5px 5px 1px rgba(105, 105, 105, 0.3);
+                            }
+                            a {
+                                font-size: 24px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                height: 50px;
+                                align-items: center;
+                                padding: 15px;
+                                color: #d56246;
+                                &:hover {
+                                    color: #647d5c;
+                                    transform: scale(2);
+                                }
+                            }
+                        }
+                        .adopter {
+                            width: 160px;
+                            border: 1px solid #fff;
+                            border-radius: 10px;
+                            background-color: rgb(253, 253, 253);
+                            &:hover {
+                                transform: scale(1.2);
+                                transition: 0.3s;
+                                box-shadow: 5px 5px 1px rgba(105, 105, 105, 0.3);
+                            }
+                            a {
+                                font-size: 24px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                height: 50px;
+                                align-items: center;
+                                padding: 15px;
+                                color: #d56246;
+                                &:hover {
+                                    color: #647d5c;
+                                }
+                            }
+                        }
+                        li {
+                            height: 70px;
+                            color: #d56246;
+                            text-align: center;
+                            background-color: rgb(253, 253, 253);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 10px 12px 0px 25px;
+                            font-weight: 600;
+                            &:hover {
+                                transform: scale(1.2);
+                                transition: 0.3s;
+                                box-shadow: 5px 5px 1px rgba(105, 105, 105, 0.3);
+                            }
+                            .badge {
+                                background-color: #647d5c;
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
