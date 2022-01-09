@@ -3,3 +3,66 @@
     padding: 0;
     box-sizing: border-box;
 }
+.box{
+    color: #ff7f26;
+    color: #00263a;
+    color: #ff4040;
+    color: #f8f2d8;
+
+}
+// nav
+
+
+// 首頁大圖區
+.home{
+    background: url("../team-img/pic1030px/13.png");
+    background-size: cover;
+    height: 100vh;
+    min-height: 500px;
+    color: cornsilk;
+    .container{
+        height: 100vh;
+        // margin: auto 100px;
+        .home-content{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 40px;
+                a{
+                    color: rgb(250, 250, 249);
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    &:hover{
+                        color: #f7ee9c;
+                        box-shadow: 10px 10px 5px rgba($color: #f7ee9c, $alpha: 1.0);
+                    }
+                }
+            }
+            .home-content-left{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1, h2{
+                    font-size: 75px;
+                    font-weight: 600;
+                    color: #647D5C;
+                }
+                .text-4{
+                    .btn{
+                        color: #D56246;
+                        font-weight: 600;
+                        &:hover{
+                            color: #f0bbc7;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

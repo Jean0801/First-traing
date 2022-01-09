@@ -14,13 +14,15 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Swiper CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- index css -->
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5" style="background-color: #647D5C;">
         <div class="container">
             <a class="navbar-brand " href="#">
-                <img src="./team-img/paw01.svg" alt="">logo
+                <img src="./team-img/logo2.png" width="50px" height="50px" alt="">
             </a>
 
             <!-- 漢堡盒 -->
@@ -62,20 +64,64 @@
     </nav>
 
     <main>
-        <section class="home" id="home">
-                <div class="home-content bg-secondary text-white" >
-                    <ul class="text-1 list-unstyled d-flex justify-content-end ">
-                        <li><a href="">動物認養</a></li>
-                        <li><a href="">寵物保母</a></li>
-                        <li><a href="">動物保護</a></li>
-                        <li><a href="">媒合故事</a></li>
-                        <li><a href="">最新消息</a></li>
+        <!-- 大圖區 -->
+        <section class="home position-relative mb-5" id="home">
+            <div class="container">
+                <div class="home-content">
+                    <ul class="list-unstyled">
+                        <li class="py-4 px-2"><a href="">動物認養</a></li>
+                        <li class="py-4 px-2"><a href="">寵物保母</a></li>
+                        <li class="py-4 px-2"><a href="">動物保護</a></li>
+                        <li class="py-4 px-2"><a href="">媒合故事</a></li>
+                        <li class="py-4 px-2"><a href="">最新消息</a></li>
                     </ul>
-                    <div class="text-2">不只有人需要</div>
-                    <div class="text-2">一個家</div>
-                    <div class="text-3"><button type="button" class="btn btn-dark rounded-pill">一起回家吧!</button></div>
+                    <div class="home-content-left py-5 position-absolute top-50">
+                        <h1 class="text-2">不只有人需要</h1>
+                        <h2 class="text-3">一個家</h2>
+                        <div class="text-4"><button type="button" class="btn btn-dark rounded-pill">一起回家吧</button></div>
+                    </div>
                 </div>
+            </div>
         </section>
+        <!-- 關於一起回家 -->
+        <section class="mb-5">
+            <div class="container d-flex justify-content-center">
+                <div class="card mb-3 d-flex flex-row" style="max-width: 950px;">
+                    <div class="card-body px-4 shadow position-relative">
+                        <h2 class="card-title my-4">關於 "一起回家"</h2>
+                        <p class="card-text fw-bold">隨著網路科技的進步，正確的動物保護觀念已逐漸在台灣教育紮根，我們所要做的就是希望透過有效率的免付費認養平台，幫助毛孩回家。</p>
+                        <img class="card-logo w-50 position-absolute  bottom-0 end-0"
+                            src="./team-img/LOGO/LOGO-2 透明背景.png" alt="">
+                    </div>
+                    <img class="card-img w-75 shadow" src="./team-img/pic1030px/2.png" height="400px" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- 等待一個回家機會的孩子 -->
+        <section class="wait-pic mb-5">
+            <div class="container d-flex justify-content-center">
+                <h3 class="">等待一個回家機會的孩子</h3>
+            </div>
+        </section>
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/9.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/10.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./team-img/pic1030px/11.png" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary ">Secondary</button>
+        </div>
     </main>
 
     <!-- Bootstrap  -->
@@ -84,6 +130,23 @@
         crossorigin="anonymous"></script>
     <!-- swiper 7.0 -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

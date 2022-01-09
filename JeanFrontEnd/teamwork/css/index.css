@@ -4,4 +4,90 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.box {
+  color: #ff7f26;
+  color: #00263a;
+  color: #ff4040;
+  color: #f8f2d8;
+}
+
+.home {
+  background: url("../team-img/pic1030px/13.png");
+  background-size: cover;
+  height: 100vh;
+  min-height: 500px;
+  color: cornsilk;
+}
+
+.home .container {
+  height: 100vh;
+}
+
+.home .container .home-content {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .container .home-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.home .container .home-content ul a {
+  color: #fafaf9;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home .container .home-content ul a:hover {
+  color: #f7ee9c;
+  -webkit-box-shadow: 10px 10px 5px #f7ee9c;
+          box-shadow: 10px 10px 5px #f7ee9c;
+}
+
+.home .container .home-content .home-content-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .container .home-content .home-content-left h1, .home .container .home-content .home-content-left h2 {
+  font-size: 75px;
+  font-weight: 600;
+  color: #647D5C;
+}
+
+.home .container .home-content .home-content-left .text-4 .btn {
+  color: #D56246;
+  font-weight: 600;
+}
+
+.home .container .home-content .home-content-left .text-4 .btn:hover {
+  color: #f0bbc7;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 /*# sourceMappingURL=index.css.map */
