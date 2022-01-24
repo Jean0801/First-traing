@@ -15,6 +15,7 @@ class BlogController extends Controller
     public function index()
     {
         $articles = Article::get();
+        dd($articles);
         return view('blog', compact('articles'));
     }
 
@@ -87,7 +88,7 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        
+
         Article::find($id)->delete();
         // Article::destroy($id);
         return redirect('/blog');
